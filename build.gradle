@@ -1,0 +1,50 @@
+buildscript {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+}
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+    id 'application'
+    id 'org.beryx.jlink' version '2.23.6'
+}
+
+group 'org.dcsmf'
+version '1.0.0'
+mainClassName='org.dcsmf.App'
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.jfoenix:jfoenix:9.0.10'
+}
+
+javafx {
+    version = '14'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+jlink{
+    addOptions '--strip-debug',
+            '--no-header-files',
+            '--no-man-pages',
+            '--compress=2',
+            '--strip-native-commands'
+    project.tasks.getByName('jlink').doLast {
+        delete "$imageDir/bin/TestFx"
+        delete "$imageDir/bin/TestFx.bat"
+    }
+    launcher{
+        noConsole=true
+    }
+    jpackage{
+        imageName='jfxtest'
+        appVersion='1.0.0'
+        def currentOs = org.gradle.internal.os.OperatingSystem.current()
+        def imgType = currentOs.windows ? 'ico' : currentOs.macOsX ? 'icns' : 'png'
+        icon = "src/main/resources/AppIcon.$imgType"
+    }
+}
