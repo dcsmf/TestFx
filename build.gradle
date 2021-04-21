@@ -33,8 +33,8 @@ jlink{
             '--no-header-files',
             '--no-man-pages',
             '--compress=2',
-            '--strip-native-commands',
-            '--vm=client'
+            '--strip-native-commands'
+            //'--vm=client'
     project.tasks.getByName('jlink').doLast {
         delete "$imageDir/bin/TestFx"
         delete "$imageDir/bin/TestFx.bat"
