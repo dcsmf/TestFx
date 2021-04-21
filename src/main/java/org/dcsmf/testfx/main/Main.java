@@ -1,4 +1,4 @@
-package org.dcsmf;
+package org.dcsmf.testfx.main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -12,7 +12,8 @@ plugins {
 
 group 'org.dcsmf'
 version '1.0.0'
-mainClassName='org.dcsmf.App'
+mainClassName='org.dcsmf.testfx.main.App'
+compileJava.options.encoding = "UTF-8"
 
 repositories {
     maven { url 'https://maven.aliyun.com/repository/public/' }
@@ -33,6 +34,7 @@ jlink{
             '--no-man-pages',
             '--compress=2',
             '--strip-native-commands'
+            '--client'
     project.tasks.getByName('jlink').doLast {
         delete "$imageDir/bin/TestFx"
         delete "$imageDir/bin/TestFx.bat"

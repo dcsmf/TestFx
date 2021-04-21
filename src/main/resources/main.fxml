@@ -9,41 +9,41 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/16">
+<VBox prefHeight="400.0" prefWidth="640.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.dcsmf.testfx.conroller.Controller">
   <MenuBar VBox.vgrow="NEVER">
     <Menu mnemonicParsing="false" text="File">
-      <MenuItem mnemonicParsing="false" text="New"/>
-      <MenuItem mnemonicParsing="false" text="Open…"/>
-      <Menu mnemonicParsing="false" text="Open Recent"/>
-      <SeparatorMenuItem mnemonicParsing="false"/>
-      <MenuItem mnemonicParsing="false" text="Close"/>
-      <MenuItem mnemonicParsing="false" text="Save"/>
-      <MenuItem mnemonicParsing="false" text="Save As…"/>
-      <MenuItem mnemonicParsing="false" text="Revert"/>
-      <SeparatorMenuItem mnemonicParsing="false"/>
-      <MenuItem mnemonicParsing="false" text="Preferences…"/>
-      <SeparatorMenuItem mnemonicParsing="false"/>
-      <MenuItem mnemonicParsing="false" text="Quit"/>
+      <MenuItem mnemonicParsing="false" text="New" />
+      <MenuItem mnemonicParsing="false" text="Open…" />
+      <Menu mnemonicParsing="false" text="Open Recent" />
+      <SeparatorMenuItem mnemonicParsing="false" />
+      <MenuItem mnemonicParsing="false" text="Close" />
+      <MenuItem mnemonicParsing="false" text="Save" />
+      <MenuItem mnemonicParsing="false" text="Save As…" />
+      <MenuItem mnemonicParsing="false" text="Revert" />
+      <SeparatorMenuItem mnemonicParsing="false" />
+      <MenuItem mnemonicParsing="false" text="Preferences…" />
+      <SeparatorMenuItem mnemonicParsing="false" />
+      <MenuItem mnemonicParsing="false" text="Quit" />
     </Menu>
     <Menu mnemonicParsing="false" text="Edit">
-      <MenuItem mnemonicParsing="false" text="Undo"/>
-      <MenuItem mnemonicParsing="false" text="Redo"/>
-      <SeparatorMenuItem mnemonicParsing="false"/>
-      <MenuItem mnemonicParsing="false" text="Cut"/>
-      <MenuItem mnemonicParsing="false" text="Copy"/>
-      <MenuItem mnemonicParsing="false" text="Paste"/>
-      <MenuItem mnemonicParsing="false" text="Delete"/>
-      <SeparatorMenuItem mnemonicParsing="false"/>
-      <MenuItem mnemonicParsing="false" text="Select All"/>
-      <MenuItem mnemonicParsing="false" text="Unselect All"/>
+      <MenuItem mnemonicParsing="false" text="Undo" />
+      <MenuItem mnemonicParsing="false" text="Redo" />
+      <SeparatorMenuItem mnemonicParsing="false" />
+      <MenuItem mnemonicParsing="false" text="Cut" />
+      <MenuItem mnemonicParsing="false" text="Copy" />
+      <MenuItem mnemonicParsing="false" text="Paste" />
+      <MenuItem mnemonicParsing="false" text="Delete" />
+      <SeparatorMenuItem mnemonicParsing="false" />
+      <MenuItem mnemonicParsing="false" text="Select All" />
+      <MenuItem mnemonicParsing="false" text="Unselect All" />
     </Menu>
     <Menu mnemonicParsing="false" text="Help">
-      <MenuItem mnemonicParsing="false" text="About MyHelloApp"/>
+      <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
     </Menu>
   </MenuBar>
   <AnchorPane VBox.vgrow="ALWAYS">
-    <JFXButton layoutX="114.0" layoutY="159.0" text="123"/>
-    <JFXButton layoutX="73.0" layoutY="35.0" prefHeight="60.0" prefWidth="104.0" text="abc"/>
-    <JFXCheckBox layoutX="209.0" layoutY="116.0" text="对"/>
+    <JFXButton layoutX="114.0" layoutY="159.0" text="123" />
+    <JFXButton layoutX="73.0" layoutY="35.0" onAction="#Bt1" prefHeight="60.0" prefWidth="104.0" text="abc" />
+    <JFXCheckBox layoutX="209.0" layoutY="116.0" text="对" />
   </AnchorPane>
 </VBox>
