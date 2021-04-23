@@ -1,13 +1,14 @@
 buildscript {
     repositories {
-        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url 'https://plugins.gradle.org/m2/' }
     }
 }
+
 plugins {
     id 'java'
-    id 'org.openjfx.javafxplugin' version '0.0.9'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
     id 'application'
-    id 'org.beryx.jlink' version '2.23.6'
+    id 'org.beryx.jlink' version '2.23.7'
 }
 
 group 'org.dcsmf'
@@ -21,11 +22,11 @@ repositories {
 }
 
 dependencies {
-    compile 'com.jfoenix:jfoenix:9.0.10'
+    implementation 'com.jfoenix:jfoenix:9.0.10'
 }
 
 javafx {
-    version = '15'
+    version = '16'
     modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 jlink{
@@ -34,7 +35,6 @@ jlink{
             '--no-man-pages',
             '--compress=2',
             '--strip-native-commands'
-            //'--vm=client'
     project.tasks.getByName('jlink').doLast {
         delete "$imageDir/bin/TestFx"
         delete "$imageDir/bin/TestFx.bat"
